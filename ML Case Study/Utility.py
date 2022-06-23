@@ -10,7 +10,7 @@ def PlotClusters(df):
     plt.scatter(df[df['Labels'] == i].iloc[:,0] , df[df['Labels'] == i].iloc[:,1], alpha=0.55, s= list(random.choices(list(range(20,60)), k=n)), label = f'Cluster: {i + 1}')
 
   plt.ylabel('Principal Component 1', fontsize=15, labelpad=10)
-  plt.xlabel('Principal Component 2', fontsize=15, labelpad=10)
+  plt.xlabel('Principal Component 2', fontsize=15, labelpad=12)
   for spine in plt.gca().spines.values():
     spine.set_visible(False)
 
