@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from sklearn.metrics import ConfusionMatrixDisplay, classification_report, RocCurveDisplay
 
-def model_report(y, y_preds, labels, test_data=False, conf_matrix=False, class_report=False, roc_curve=False):
+def model_report(clf, y, y_preds, labels, test_data=False, conf_matrix=False, class_report=False, roc_curve=False):
 
   '''
   This function can be used to:
