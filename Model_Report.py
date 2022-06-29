@@ -24,7 +24,7 @@ def model_report(y, y_preds, labels, test_data=False, conf_matrix=False, class_r
 
   #Plotting Confusion Matrix 
   if conf_matrix:
-    fig = plt.figure(figsize=(6,8))
+    fig = plt.figure(figsize=(12,8))
     ConfusionMatrixDisplay.from_predictions(y, y_preds, display_labels=labels, cmap='BuPu', 
                                             ax=plt.gca(), colorbar=False)
 
