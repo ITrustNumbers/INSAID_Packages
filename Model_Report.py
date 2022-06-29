@@ -31,7 +31,7 @@ def model_report(clf, y, y_preds, labels, test_data=False, conf_matrix=False, cl
     plt.tick_params(axis='both', pad=4, labelsize=16, size=0)
 
     plt.gca().set_xticklabels(labels)
-    plt.gca().set_yticklabels(labels)
+    plt.gca().set_yticklabels(labels, rotation = 0)
 
     plt.title('Confusion Matrix for {}'.format(clf_name), 
                   fontsize=17, pad=14)
