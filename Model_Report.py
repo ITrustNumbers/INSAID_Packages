@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+from sklearn.metrics import confusion_matrix, classification_report, accuracy_score, roc_auc_score
 from sklearn.metrics import ConfusionMatrixDisplay, classification_report, RocCurveDisplay
 
 def model_report(clf, y, y_preds, labels, test_data=False, conf_matrix=False, class_report=False, roc_curve=False):
