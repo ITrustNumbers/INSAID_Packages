@@ -109,7 +109,7 @@ class ObjectDetection:
             count = count + 1
             out.write(frame)
             
-class WeaponDetection(input_path, output_path):
+class WeaponDetection:
     
     def __init__(self, input_path, output_path):
         
