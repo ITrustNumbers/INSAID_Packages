@@ -118,7 +118,7 @@ class WeaponDetection:
         
     def __get_video(self):
         
-        os.system("wget -q --directory-prefix='/content/Outputs' https://github.com/ITrustNumbers/INSAID_Packages/blob/master/Weapon%20Detection/Output.mp4")
+        os.system("wget -q --directory-prefix='/content/Outputs' https://github.com/ITrustNumbers/INSAID_Packages/raw/master/Weapon%20Detection/Output.mp4")
     
     def __show_fps(self):
         
