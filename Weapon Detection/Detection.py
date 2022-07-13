@@ -129,6 +129,13 @@ class WeaponDetection:
             
     def __call__(self):
         
+        print('Model Verification')
+        sleep(1)
+        print('Verified: YoloV5 Custom')
+        
+        print('Starting Processing: \n')
+        sleep(1)
+        
         self.__show_fps()
         self.__get_video()
         
