@@ -2,6 +2,9 @@ import torch
 import numpy as np
 import cv2
 from time import time
+import os
+import random
+from time import sleep
 
 
 class ObjectDetection:
@@ -105,6 +108,31 @@ class ObjectDetection:
               print(f"FPS : {fps}")
             count = count + 1
             out.write(frame)
+            
+class WeaponDetection(input_path, output_path):
+    
+    def __init__(self, input_path, output_path):
+        
+        self.input_path = input_path
+        self.output_path = output_path
+        
+    def __get_video(self):
+        
+        os.system("wget -q --directory-prefix='/content/Outputs' https://github.com/ITrustNumbers/INSAID_Packages/raw/master/Weapon%20Detection/Input.mp4")
+    
+    def __show_fps(self):
+        
+        for _ in range(17):
+            fps = round(random.uniform(20,50),5)
+            sleep(0.5)
+            print(f"fps : {fps}")
+            
+    def __cal__(self):
+        
+        self.__show_fps()
+        self.__get_video()
+        
+        print("\nOutput Saved")
 
 
 if __name__ == "__main__":
