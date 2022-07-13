@@ -127,7 +127,7 @@ class WeaponDetection:
             sleep(0.5)
             print(f"fps : {fps}")
             
-    def __cal__(self):
+    def __call__(self):
         
         self.__show_fps()
         self.__get_video()
