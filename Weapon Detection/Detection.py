@@ -164,6 +164,17 @@ class display_images:
         im = Image.open(dir_path + im_name)
         im_ar = np.asarray(im)
         ax.imshow(im_ar, interpolation='nearest')
+        
+class display_prediction:
+  
+  def __init__(self, img_lst):
+    #Plot
+    fig, axes = plt.subplots(1, 2, figsize=(20,8))
+
+    for ax, im in zip(axes.reshape(1, -1)[0], img_lst):
+      im = Image.open(im)
+      im_ar = np.asarray(im)
+      ax.imshow(im_ar, interpolation='nearest')
 
 if __name__ == "__main__":
   # Create a new object and execute.
