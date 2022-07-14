@@ -5,6 +5,8 @@ from time import time
 import os
 import random
 from time import sleep
+from PIL import Image
+import matplotlib.pyplot as plt
 
 
 class ObjectDetection:
@@ -140,7 +142,28 @@ class WeaponDetection:
         self.__get_video()
         
         print("\nOutput Saved")
+        
+class display_images:
 
+  def __init__(self, dir_path, img_lst):
+
+    if len(img_lst) > 2:
+      #Plotting Images
+      fig, axes = plt.subplots(2, 2, figsize=(20,15))
+
+      for ax, im_name in zip(axes.reshape(1, -1)[0], img_lst):
+        im = Image.open(dir_path + im_name)
+        im_ar = np.asarray(im)
+        ax.imshow(im_ar, interpolation='nearest')
+
+    elif len(img_lst) == 2:
+      #Plotting Images
+      fig, axes = plt.subplots(1, 2, figsize=(20,8))
+
+      for ax, im_name in zip(axes.reshape(1, -1)[0], img_lst):
+        im = Image.open(dir_path + im_name)
+        im_ar = np.asarray(im)
+        ax.imshow(im_ar, interpolation='nearest')
 
 if __name__ == "__main__":
   # Create a new object and execute.
